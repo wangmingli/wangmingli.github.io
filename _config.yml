@@ -9,18 +9,14 @@ desc:
 
 custom:
     category:
-        java: java
-        redis: redis
-        mem: memcache
+        default: Default Category
+        another: Another Category
     categories:
-      - name:  java
-        title: java
+      - name:  default
+        title: Default Category
 
-      - name:  redis
-        title: redis
-        
-      - name:  mem        
-        title: memcache
+      - name:  another
+        title: Another Category
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
