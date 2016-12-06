@@ -20,7 +20,7 @@ custom:
         title: redis Category
         
       - name:  memcache        
-        title: redis Category
+        title: memcache Category
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
