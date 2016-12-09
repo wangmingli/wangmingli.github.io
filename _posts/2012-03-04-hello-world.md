@@ -9,7 +9,7 @@ category: java
 现在，我可以：
 
 * 使用纯文本的[Markdown]编辑文章
-* 使用[git] (https://github.com/)维护文章的版本
+* 使用[git](http://www.baidu.com) 维护文章的版本
 * 不用租一个虚拟空间和数据库服务，而就在[GitHub]上托管整个网站
 * 自定义域名指向
 * 使用[Disqus]的云评论服务
