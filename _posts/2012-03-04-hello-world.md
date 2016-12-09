@@ -9,7 +9,7 @@ category: java
 现在，我可以：
 
 * 使用纯文本的[Markdown]编辑文章
-* 使用git[git] (https://github.com/)维护文章的版本
+* 使用[git] (https://github.com/)维护文章的版本
 * 不用租一个虚拟空间和数据库服务，而就在[GitHub]上托管整个网站
 * 自定义域名指向
 * 使用[Disqus]的云评论服务
@@ -21,4 +21,4 @@ category: java
 
 感谢这个有云的时代！可以让我们通过一件件简单的工具打造属于每个程序员自己的站点，[像黑客一样写博客](http://kyle.xlau.org/posts/blogging-like-a-hacker.html)（原文：[Blogging Like a Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)）。
 
->{% include references.md %}
+
