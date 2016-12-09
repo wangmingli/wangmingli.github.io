@@ -6,7 +6,7 @@ category: Java
 
 jps (Java Virtual Machine Process Status) 显示所有java进程pid的命令以及相关参数[当前用户下]
 
-<br/> <br/> <br/>
+<br/>
 
 
 
@@ -24,7 +24,7 @@ java程序启动后，会在java.io.tmpdir指定的目录下[临时文件夹]，
 
 jps [ options ] [ pid ]
 
-*  *-m 列出传给main方法的参数*
+*  **-m 列出传给main方法的参数**
 
 *  **-l 列出应用程序main class的完整包名 or 应用程序的jar文件完整路径名**
 
