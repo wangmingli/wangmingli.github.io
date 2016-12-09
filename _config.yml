@@ -11,7 +11,7 @@ custom:
     category:
         Java: Java
         Redis: Redis
-        Redis_1: Redis_1
+        Memcache: Memcache
     categories:
       - name:  Java
         title: Java
@@ -19,8 +19,8 @@ custom:
       - name:  Redis
         title: Redis
 
-      - name:  Redis_1
-        title: Redis_1
+      - name:  Memcache
+        title: Memcache
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
