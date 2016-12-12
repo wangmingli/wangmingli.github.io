@@ -1,6 +1,6 @@
 ---
 layout: post
-title: java command
+title: java command jps
 category: Java
 ---
 
