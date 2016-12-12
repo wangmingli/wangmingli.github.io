@@ -6,7 +6,6 @@ category: Java
 jmap(Java Memory Map) 显示出java进程内存中的obj的使用情况
 <br/> 
  
-常见错误  
 
 *  outOfMemoryError
 
