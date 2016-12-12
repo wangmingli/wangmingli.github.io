@@ -5,6 +5,7 @@ category: Java
 ---
 jmap(Java Memory Map) 显示出java进程内存中的obj的使用情况
 <br/>
+ 
 * 内存错误:<br/>
 
 *  **outOfMemoryError**
@@ -13,9 +14,9 @@ jmap(Java Memory Map) 显示出java进程内存中的obj的使用情况
 
 *  **outOfMemoryError  GC overhead limit exceed**
 
-<br/> <br/> <br/> <br/> <br/>
+<br/> <br/> <br/>
 
-jps [ options ] [ pid ]
+jmap [ options ] [ pid ]
 
 -heap    打印heap的概要信息 <br/>
 -permstat 打印classload和jvm heap持久层的信息和classload详细信息及内部String的数量和占用内存数也会打印出来  <br/>
