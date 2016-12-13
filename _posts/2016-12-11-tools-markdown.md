@@ -34,6 +34,37 @@ category: Tools
 
 note: 符号与标题之间建议保留一个字符的空格
 
+
+加粗   **宠辱不惊**    斜体   *看庭前花开花落*  
+
+<br/>
+单行     `hello world`    
+
+<br/>
+
+多行
+```
+hello world 1
+hello world 2
+hello world 3
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br/>
 链接、图片 <br/>
 [sogou](http://www.sogou.com)
