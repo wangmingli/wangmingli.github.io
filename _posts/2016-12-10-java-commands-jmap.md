@@ -3,9 +3,11 @@ layout: post
 title: java command jmap
 category: Java
 ---
-jmap(Java Memory Map) 显示出java进程内存中的obj的使用情况
+jmap(Java Memory Map) 显示出java进程内存中的obj的使用情况,制作堆Dump[二进制格式] <br/>  
+
 <br/> 
  
+常见内存错误 
 
 *  outOfMemoryError
 
@@ -24,5 +26,5 @@ jmap [ options ] [ pid ]
 * **-histo:live JVM会先触发gc，然后再统计信息**
 * **-finalizerinfo 打印正等候回收的对象的信息**
 
-
+            -XX:+HeapDumpOnOutOfMemoryError  --> jvm 在内存异常时,自动生成堆Dump
 
