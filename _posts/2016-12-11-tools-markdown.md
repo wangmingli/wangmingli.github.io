@@ -3,6 +3,8 @@ layout: post
 title: markdown manual
 category: Tools
 ---
+标题
+
 # 这是 H1
 
 ## 这是 H2
@@ -15,6 +17,8 @@ category: Tools
 
 ###### 这是 H6
 
+列表
+
 - 文本1
 - 文本2
 - 文本3
@@ -23,7 +27,7 @@ category: Tools
 2. 文本2
 3. 文本3
 
-
+引用
 
 > 宠辱不惊，看庭前花开花落；去留无意，望天空云卷云舒 
 
