@@ -58,6 +58,21 @@ GC性能的指标:
 大部分的对象被直接分配到年轻代的eden区（很大的对象会被直接分配到年老代中）<br/>  
 survivor区里面放至少熬过一个YGC的对象，在survivor里面的对象，才有机会被考虑提升到年老代中。
 同一时刻，两个survivor只被使用一个，另外一个是用来进行复制GC时使用的。  
+  <br/>  <br/>
+
+### GC过程
+1. eden空间被分配完,就会发生一次垃圾收集.eden中仍存活的对象会被复制到survivorspace1中,其他对象直接丢弃,其占用的内存回收.  
+
+2. 垃圾回收后,JVM在eden中创建对象.当eden的空间再次被分配完,又会发生一次垃圾收集.将eden中存活的对象复制到另一个survivorspace2中  
+
+3. 为survivorspace1中的每一个对象计算年龄age和存活期threshold.age小于threshold的将会被复制到survivorspace2中,这些对象被称为aged对象(老化对象),等于小于threshold的将会被复制到old generation.清空的survivorspace1为下一次的次要垃圾收集中复制的目的地
+
+           age是对象在复制到old generation之前经历过垃圾收集的次数
+           threshold是在这一次的次要垃圾收集将会被复制到old generation的对象的门槛
+
+
+    
+![](https://github.com/wangmingli/wangmingli.github.io/raw/master/pic/gc_3.jpg)   <br/>
 
 
 
