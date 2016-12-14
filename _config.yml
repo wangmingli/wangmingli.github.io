@@ -12,6 +12,7 @@ custom:
         Java: Java
         Redis: Redis
         Memcache: Mem
+        Linux: Linux
         Tools: Tools
     categories:
       - name:  Java
@@ -22,6 +23,9 @@ custom:
 
       - name:  Memcache
         title: Mem
+
+      - name:  Linux
+        title: Linux
 
       - name:  Tools
         title: Tools
