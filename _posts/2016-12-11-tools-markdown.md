@@ -45,15 +45,8 @@ note: 符号与标题之间建议保留一个字符的空格
 
 	     hello world 1
 	     hello world 2
+	hello world 3
 
-
-
-     	| Tables        | Are           | Cool  |
-	| ------------- |:-------------:| -----:|
-	| col 3 is      | right-aligned | $1600 |
-	| col 2 is      | centered      |   $12 |
-	| zebra stripes | are neat      |    $1 |   
-        
 	<br/>   
 链接、图片 <br/>
 [sogou](http://www.sogou.com)
