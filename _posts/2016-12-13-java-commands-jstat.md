@@ -8,7 +8,7 @@ jstat(Java Virtual Machine Statistics Monitoring Tool)用于监控基于HotSpot�
 <br/>
 
 
-jstat <option> [-t] [-h lines] pid [interval] [count]  
+jstat option [-t] [-h lines] pid [interval] [count]  
 
 
 *  **-h n    用于指定每隔几行就输出列头,默认是只在第一行出现列头**
@@ -42,7 +42,7 @@ jstat -compiler <pid>  显示VM实时编译的数量等信息
 
 jstat -gcutil <pid>  显示GC信息    
 
-* 时间单位: s
+* *时间单位: s*   
 
 
 
