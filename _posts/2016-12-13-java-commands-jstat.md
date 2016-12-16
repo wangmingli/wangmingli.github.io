@@ -3,37 +3,42 @@ layout: post
 title: java command jps
 category: Java
 ---
-
-jps (Java Virtual Machine Process Status) 显示所有java进程pid的命令以及相关参数[当前用户下]
+jstat(Java Virtual Machine Statistics Monitoring Tool)用于监控基于HotSpot的JVM，对其堆的使用情况进行实时的命令行的统计
 
 <br/>
 
 
+jstat -<option> [-t] [-h <lines>] <pid> [<interval> [<count>]]
 
-实现机制如下：
 
-java程序启动后，会在java.io.tmpdir指定的目录下[临时文件夹]，生成一个类似于hsperfdata_UserName的文件夹;
+*  **-h n    用于指定每隔几行就输出列头,默认是只在第一行出现列头**
 
-[在Linux中为/tmp/hsperfdata_{userName}/]，有几个文件->名字就是java进程的pid。所以列出当前运行的java进程，只是把这个目录里的文件名列一下而已。 
+*  **-t     用于在输出内容的第一列显示时间戳，这个时间戳代表的时JVM开始启动到现在的时间**
 
-至于系统的参数什么，就可以解析这几个文件获得。
+*  **interval 间隔时间，单位可以是秒或者毫秒，通过指定s或ms确定，默认单位为毫秒**
+
+*  **count   打印次数，如果缺省则打印无数次**
 <br/> <br/> <br/>
 
 
 
+jstat –class <pid>  显示加载class的数量，及所占空间等信息
 
-jps [ options ] [ pid ]
+* Loaded 装载的类的数量  
+* Bytes 装载类所占用的字节数
+* Unloaded 卸载类的数量
+* Bytes 卸载类的字节数
+* Time 装载和卸载类所花费的时间
+ <br/>  
+jstat -compiler <pid>  显示VM实时编译的数量等信息
+* Compiled 编译任务执行数量
+* Failed 编译任务执行失败数量
+* Invalid 编译任务执行失效数量
+* Time 编译任务消耗时间
+* FailedType 最后一个编译失败任务的类型
+* FailedMethod 最后一个编译失败任务所在的类及方法
 
-*  **-m 列出传给main方法的参数**
 
-*  **-l 列出应用程序main class的完整包名 or 应用程序的jar文件完整路径名**
+jstat -gcutil <pid>  显示GC信息
+* 时间单位: s
 
-*  **-v 列出传递给JVM的参数**
-<br/> <br/> <br/>
-
-
-
-
-jps 失效原因
-
-                        磁盘读写问题、磁盘已满等，目录的权限问题以及文件丢失等问题...

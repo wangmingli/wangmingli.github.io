@@ -1,6 +1,6 @@
 ---
 layout: post
-title: java command jps
+title: java command jstack
 category: Java
 ---
 
