@@ -29,7 +29,7 @@ jstat –class <pid>  显示加载class的数量，及所占空间等信息
 * Unloaded 卸载类的数量
 * Bytes 卸载类的字节数
 * Time 装载和卸载类所花费的时间
- <br/>  
+ <br/>
 jstat -compiler <pid>  显示VM实时编译的数量等信息
 
 * Compiled 编译任务执行数量
