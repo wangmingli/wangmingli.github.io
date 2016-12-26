@@ -8,7 +8,7 @@ jstat(Java Virtual Machine Statistics Monitoring Tool)用于监控基于HotSpot�
 <br/>
 
 
-jstat option [-t] [-h lines] pid [interval] [count]  
+####  jstat option [-t] [-h lines] pid [interval] [count]  
 
 
 *  **-h n    用于指定每隔几行就输出列头,默认是只在第一行出现列头**
@@ -22,7 +22,7 @@ jstat option [-t] [-h lines] pid [interval] [count]
 
 
 
-jstat –class <pid>  显示加载class的数量，及所占空间等信息
+####  jstat –class <pid>  显示加载class的数量，及所占空间等信息
 
 * Loaded 装载的类的数量  
 * Bytes 装载类所占用的字节数
@@ -30,7 +30,7 @@ jstat –class <pid>  显示加载class的数量，及所占空间等信息
 * Bytes 卸载类的字节数
 * Time 装载和卸载类所花费的时间
  <br/>
-jstat -compiler <pid>  显示VM实时编译的数量等信息
+####  jstat -compiler <pid>  显示VM实时编译的数量等信息
 
 * Compiled 编译任务执行数量
 * Failed 编译任务执行失败数量
@@ -40,7 +40,7 @@ jstat -compiler <pid>  显示VM实时编译的数量等信息
 * FailedMethod 最后一个编译失败任务所在的类及方法
 
 
-jstat -gcutil <pid>  显示GC信息    
+####  jstat -gcutil <pid>  显示GC信息    
 
 * *时间单位: s*   
 
