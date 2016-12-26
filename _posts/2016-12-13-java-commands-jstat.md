@@ -29,8 +29,9 @@ jstat(Java Virtual Machine Statistics Monitoring Tool)用于监控基于HotSpot�
 * Unloaded 卸载类的数量
 * Bytes 卸载类的字节数
 * Time 装载和卸载类所花费的时间
- <br/>
-####  jstat -compiler <pid>  显示VM实时编译的数量等信息
+ <br/>        
+       
+####  jstat -compiler <pid>  显示VM实时编译的数量等信息      
 
 * Compiled 编译任务执行数量
 * Failed 编译任务执行失败数量

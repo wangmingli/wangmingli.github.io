@@ -10,6 +10,7 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
 public class LinkedList<E> extends AbstractSequentialList<E> implements List<E>, Queue<E>, Cloneable, Serializable  <br/> 
 
 <br/>   
+            
 ####  ArrayList  动态数组结构 
 ArrayList其实是包装了一个数组 Object[]，当实例化一个ArrayList时，一个数组也被实例化，当向ArrayList中添加对象是，数组的大小也相应的改变 <br/> 
 
