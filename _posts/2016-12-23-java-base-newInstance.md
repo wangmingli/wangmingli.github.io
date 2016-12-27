@@ -15,57 +15,21 @@ Class.forName(xxx.xx.xx); 作用是要求JVM查找并加载指定的类,也就�
 
 
 ExampleInterface是Example的接口，可以写成如下形式：    
-```js
-String className = "Example"; 
-class c = Class.forName(className); 
-factory = (ExampleInterface)c.newInstance(); 
+```
+String className = "Example"; <br/>   
+class c = Class.forName(className);  <br/>   
+factory = (ExampleInterface)c.newInstance();  <br/>   
 ```
 
 进一步可以写成如下形式：    
-```js
-//从xml 配置文件中获得字符串 
-String className = readfromXMlConfig; 
-class c = Class.forName(className); 
-factory = (ExampleInterface)c.newInstance(); 
-```
 
- 
- 
+     //从xml 配置文件中获得字符串 
+     String className = readfromXMlConfig; 
+     class c = Class.forName(className); 
+     factory = (ExampleInterface)c.newInstance(); 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
+上面代码已经不存在Example的类名称，它的优点是，无论Example类怎么变化，上述代码不变，甚至可以更换Example的兄弟类Example2 , Example3 , Example4……，只要他们继承ExampleInterface就可以。 
 
 
