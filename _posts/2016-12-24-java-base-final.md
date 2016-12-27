@@ -51,3 +51,30 @@ final是java的关键字，它所表示的是“这部分是无法修改”。�
 
 
 
+
+
+
+
+
+
+jdflkdasjflsdjfldsj
+
+
+
+
+public class Person {
+	private String name;
+
+	Person(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}
