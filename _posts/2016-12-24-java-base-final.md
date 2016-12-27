@@ -15,52 +15,6 @@ final是java的关键字，它所表示的是“这部分是无法修改”。�
 
 有些变量，我们希望它可以根据对象的不同而表现不同，但同时又不希望它被改变，这个时候我们就可以使用运行期常量。对于运行期常量，它既可是基本数据类型，也可是引用数据类型;基本数据类型不可变的是其内容，而引用数据类型不可变的是其引用，引用所指定的对象内容是可变的。[exmple：StringBuffer ]  <br/>  
 
-    public class Person {
-       private String name;
-       Person(String name){
-            this.name = name; 
-       } 
-       //set、get method  omit....
-    }
-    public class FinalTest {
-        private static Random random = new Random();
-        private final String final_01 = "chenssy"; //编译期常量，必须要进行初始化，且不可更改
-        private final String final_02; //构造器常量，在实例化一个对象时被初始化
-        private final int final_03 = random.nextInt(50); //使用随机数来进行初始化
-        public final Person final_04 = new Person("chen_ssy"); //final指向引用数据类型
-
-        FinalTest(String final_02){
-            this.final_02 = final_02;
-        }
-        public String toString(){
-            return "final_01 = " + final_01 +" final_02 = " + final_02 + " final_03 = " + final_03 +
-               " final_04 = " + final_04.getName();
-        }
-        public static void main(String[] args) {
-            System.out.println("------------第一次创建对象------------");
-            FinalTest final1 = new FinalTest("cm");
-            System.out.println(final1);
-            System.out.println("------------第二次创建对象------------");
-            FinalTest final2 = new FinalTest("zj");
-            System.out.println(final2);
-            System.out.println("------------修改引用对象--------------");
-            final2.final_04.setName("chenssy");
-            System.out.println(final2);
-        }
-    }
-
-
-
-
-
-
-
-
-
-jdflkdasjflsdjfldsj
-
-
-
 	
 	public class Person {
 		private String name;
@@ -68,14 +22,33 @@ jdflkdasjflsdjfldsj
 		Person(String name) {
 			this.name = name;
 		}
+                set、get method  omit....	
+	}
+
+        
+	public class Test {
+		private static Random random = new Random();
+		private final String t1 = "one"; 
+		private final String t2; 
+		private final int t3 = random.nextInt(30); 
+		public final Person t4 = new Person("happy"); 
 	
-		public String getName() {
-			return name;
+		Test(String t2) {
+			this.t2 = t2;
+		}
+		@Override
+		public String toString() {
+			return "Test [t1=" + t1 + ", t2=" + t2 + ", t3=" + t3 + ", t4=" + t4.getName()
+					+ "]";
 		}
 	
-		public void setName(String name) {
-			this.name = name;
+		public static void main(String[] args) {
+			Test test1 = new Test("s");
+			System.out.println(test1);
+			Test test2 = new Test("ms");
+			System.out.println(test2);
+			test2.t4.setName("abc");
+			System.out.println(test2);
 		}
-	
 	}
 
