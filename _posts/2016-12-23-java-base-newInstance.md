@@ -15,11 +15,11 @@ Class.forName(xxx.xx.xx); 作用是要求JVM查找并加载指定的类,也就�
 
 
 ExampleInterface是Example的接口，可以写成如下形式：    
-```
-String className = "Example"; <br/>   
-class c = Class.forName(className);  <br/>   
-factory = (ExampleInterface)c.newInstance();  <br/>   
-```
+
+     String className = "Example";    
+     class c = Class.forName(className);     
+     factory = (ExampleInterface)c.newInstance();   
+
 
 进一步可以写成如下形式：    
 
