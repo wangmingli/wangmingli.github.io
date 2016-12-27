@@ -14,16 +14,20 @@ A a = new A();    <br/>
 Class.forName(xxx.xx.xx); 作用是要求JVM查找并加载指定的类,也就是说JVM会执行该类的静态代码段,静态代码是和class绑定的，class装载成功就表示执行了你的静态代码了  <br/>   
 
 
-ExampleInterface是Example的接口，可以写成如下形式： 
-	    String className = "Example"; 
-	    class c = Class.forName(className); 
-	    factory = (ExampleInterface)c.newInstance(); 
+ExampleInterface是Example的接口，可以写成如下形式：    
+```js
+String className = "Example"; 
+class c = Class.forName(className); 
+factory = (ExampleInterface)c.newInstance(); 
+```
 
-进一步可以写成如下形式： 
-	//从xml 配置文件中获得字符串 
-	String className = readfromXMlConfig; 
-	class c = Class.forName(className); 
-	factory = (ExampleInterface)c.newInstance(); 
+进一步可以写成如下形式：    
+```js
+//从xml 配置文件中获得字符串 
+String className = readfromXMlConfig; 
+class c = Class.forName(className); 
+factory = (ExampleInterface)c.newInstance(); 
+```
 
  
  
