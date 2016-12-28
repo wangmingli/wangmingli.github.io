@@ -5,21 +5,20 @@ category: Java
 ---
 当对象类没有override equals()和hashcode()方法的时候，两个对象做比较   
 1. 如果equals()比较相同，那么hashcode()肯定相同    
-2. 如果hashcode()比较相同，那么equals()不一定相同   
-        public native int hashCode();   <br/>  
-        说明hashCode是一个本地方法，它的实现是根据本地机器相关的    
-        由于哈希码在生成的时候产生冲突造成的
+2. 如果hashcode()比较相同，那么equals()不一定相同      
+    note 
+        public native int hashCode()             
+        说明hashCode是一个本地方法，它的实现是根据本地机器相关的        
+        由于哈希码在生成的时候产生冲突造成的      
 
 
-<br/>  <br/>  <br/>   
+<br/>  <br/>     
 String 、Math、还有Integer、Double..这些封装类重写了Object中的equals()方法，让它不再比较句柄（引用），而是比较对象中实际包含的整数的值，即比较的是内容。而Object的equals()方法比较的是地址值 <br/>    
-
-
-一般来说，如果你要把一个类的对象放入容器中，那么通常要为其重写equals()方法，让他们比较地址值而不是内容值。特别地，如果要把你的类的对象放入散列中，那么还要重写hashCode()方法；要放到有序容器中，还要重写compareTo()方法。 只有用到Hashtable、HashMap、HashSet、LinkedHashMap等时才要注意hashcode，其他地方hashcode无用
+一般来说，如果你要把一个类的对象放入容器中，那么通常要为其重写equals()方法，让他们比较地址值而不是内容值。特别地，如果要把你的类的对象放入散列中，那么还要重写hashCode()方法；要放到有序容器中，还要重写compareTo()方法。 只有用到Hashtable、HashMap、HashSet、LinkedHashMap等时才要注意hashcode，其他地方hashcode无用      
     
-<br/> <br/>   
-###    为什么要重写hashCode方法?    
-在java的集合中，判断两个对象是否相等的规则是： 
+           
+### 为什么要重写hashCode方法          
+在java的集合中，判断两个对象是否相等的规则是 
 首先判断两个对象的hashCode是否相等,如果不相等，认为两个对象也不相等 
 如果相等，则判断两个对象equals运算是否相等,如果不相等则认为不相等 ,如果相等则认为两个对象相等 
 我们在equals方法中需要向下转型，效率很低，所以先判断hashCode方法可以提高效率。
@@ -150,36 +149,6 @@ String 、Math、还有Integer、Double..这些封装类重写了Object中的equ
 	//}
 
     
-	public class Person {
-		private static int age = 0;
-		public Person() {
-			age++;
-		}
-		public static void main(String[] args) {
-			Person p1 = new Person();
-			Person p2 = new Person();
-			System.out.println(p1.age);
-			System.out.println(p2.age);
-		}
-	}
-
-
-        无论是变量，方法，还是代码块，只要用static修饰，就是在类被加载时就已经"准备好了",都可以脱离对象而执行。反之，如果没有static，则必须要依赖于对象实例
-
-#### 变量  
-static修饰的变量我们称之为静态变量，没有用static修饰的变量称之为实例变量        
-  
-1. 静态变量是随着类加载时被完成初始化的，它在内存中仅有一个，且JVM也只会为它分配一次内存，同时类所有的实例都共享静态变量，可以直接通过类名来访问它    
-2. 实例变量则不同，它是伴随着实例的，每创建一个实例就会产生一个实例变量，它与该实例同生共死   
-
-
-#### 方法  
-由于他在类加载的时候就存在了，它不依赖于任何实例，所以static方法必须实现，也就是说他不能是抽象方法abstract   
-
-
-#### 代码块 
-被static修饰的代码块，我们称之为静态代码块，
-静态代码块会随着类的加载一块执行，而且他可以随意放，可以存在于该了的任何地方。
 
 
  
