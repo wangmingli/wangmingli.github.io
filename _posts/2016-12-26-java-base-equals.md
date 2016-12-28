@@ -5,9 +5,13 @@ category: Java
 ---
 当对象类没有override equals()和hashcode()方法的时候，两个对象做比较   
 1. 如果equals()比较相同，那么hashcode()肯定相同    
-2. 如果hashcode()比较相同，那么equals()不一定相同      
-               note   public native int hashCode(),说明hashCode是一个本地方法，它的实现是根据本地机器相关的          
-                      由于哈希码在生成的时候产生冲突造成的,所以上述2成立              
+2. 如果hashcode()比较相同，那么equals()不一定相同    
+             
+          note   public native int hashCode(),说明hashCode是一个本地方法，它的实现是根据本地机器相关的            
+                 由于哈希码在生成的时候产生冲突造成的,所以上述2成立                  
+
+
+
       
 
 String 、Math、还有Integer、Double..这些封装类重写了Object中的equals()方法，让它不再比较句柄（引用），而是比较对象中实际包含的整数的值，即比较的是内容。而Object的equals()方法比较的是地址值 <br/>    
@@ -83,9 +87,10 @@ String 、Math、还有Integer、Double..这些封装类重写了Object中的equ
 
 
 
-根据hashcode()对两次建立的new Student(1,"zhangsan")对象进行比较时，生成的是不同的哈希码值，所以hashset把他当作不同的对象对待了，当然此时的 equals()方法返回的值也不等。那么为什么会生成不同的哈希码值呢？
-它是一个本地方法，比较的是对象的 地址（引用地址），使用new方法创建对象，两次生成的当然是不同的对象了，造成的结果就是两个对象的hashcode() 返回的值不一样。所以根据第一个准则，hashset会把它们当作不同的对象对待，自然也用不着第二个准则进行判定了。
-那么怎么解决这个问题呢？？ 答案是：在Student类中重新hashcode()和equals()方法。 
+根据hashcode()对两次建立的new Student(1,"zhangsan")对象进行比较时，生成的是不同的哈希码值，所以hashset把他当作不同的对象对待了，当然此时的 equals()方法返回的值也不等。那么为什么会生成不同的哈希码值呢<br/>     
+       
+它是一个本地方法比较的是对象的地址，使用new方法创建对象，两次生成的当然是不同的对象，造成的结果就是两个对象的hashcode() 返回的值不一样。所以根据第一个准则，hashset会把它们当作不同的对象对待，自然也用不着第二个准则进行判定了。
+那么怎么解决这个问题呢？？ 答案是：在Student类中重新hashcode()和equals()方法     
 
 
 
