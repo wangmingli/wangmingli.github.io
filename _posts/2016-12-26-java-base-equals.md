@@ -8,11 +8,11 @@ category: Java
 2. 如果hashcode()比较相同，那么equals()不一定相同      
 
 
-               public native int hashCode(),说明hashCode是一个本地方法，它的实现是根据本地机器相关的          
-               由于哈希码在生成的时候产生冲突造成的      
-
-
+               note   public native int hashCode(),说明hashCode是一个本地方法，它的实现是根据本地机器相关的          
+                      由于哈希码在生成的时候产生冲突造成的,所以上述2成立              
        <br/>      
+
+
 String 、Math、还有Integer、Double..这些封装类重写了Object中的equals()方法，让它不再比较句柄（引用），而是比较对象中实际包含的整数的值，即比较的是内容。而Object的equals()方法比较的是地址值 <br/>    
 一般来说，如果你要把一个类的对象放入容器中，那么通常要为其重写equals()方法，让他们比较地址值而不是内容值。特别地，如果要把你的类的对象放入散列中，那么还要重写hashCode()方法；要放到有序容器中，还要重写compareTo()方法。 只有用到Hashtable、HashMap、HashSet、LinkedHashMap等时才要注意hashcode，其他地方hashcode无用      
     
